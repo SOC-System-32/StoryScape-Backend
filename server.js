@@ -3,10 +3,14 @@
 //   ThemeSupa,
 // } from '@supabase/auth-ui-shared'
 import express from "express";
+import dotenv from "dotenv";
 import cors from "cors";
 // import { v4 as uuidv4 } from 'uuid';
 import { createClient } from "@supabase/supabase-js";
 // import { useEffect, useState } from "react";
+
+dotenv.config(); // Loads the environment variables from .env file
+
 
 const supabaseUrl = process.env.CONNECTION_URL
 const supabaseKey = process.env.CONNECTION_STRING
@@ -18,7 +22,7 @@ const port = 3001;
 app.use(cors());
 app.use(express.json());
 
-
+console.log("hello")
 // function App() {
 
 //   const [userId, setUserId] = useState('');
