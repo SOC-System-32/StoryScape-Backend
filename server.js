@@ -17,6 +17,11 @@ const port = 3001;
 // Configure middleware, routes, and other server settings
 app.use(cors());
 app.use(express.json());
+app.use(session({
+  // Other session options...
+  persistSession: false
+}));
+
 
 // function App() {
 
