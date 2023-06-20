@@ -13,15 +13,10 @@ const supabaseKey = process.env.CONNECTION_STRING
 export const supabase = createClient(supabaseUrl, supabaseKey);
 const app = express();
 const port = 3001;
-const session = require('express-session');
 
 // Configure middleware, routes, and other server settings
 app.use(cors());
 app.use(express.json());
-app.use(session({
-  //Other session options...
-  persistSession: false
-}));
 
 
 // function App() {
