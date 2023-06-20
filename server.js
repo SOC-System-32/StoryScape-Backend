@@ -1,12 +1,12 @@
-import { Auth } from '@supabase/auth-ui-react'
-import {
-  ThemeSupa,
-} from '@supabase/auth-ui-shared'
+// import { Auth } from '@supabase/auth-ui-react'
+// import {
+//   ThemeSupa,
+// } from '@supabase/auth-ui-shared'
 import express from "express";
 import cors from "cors";
-import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid';
 import { createClient } from "@supabase/supabase-js";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 const supabaseUrl = process.env.CONNECTION_URL
 const supabaseKey = process.env.CONNECTION_STRING
