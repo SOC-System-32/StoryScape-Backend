@@ -14,11 +14,9 @@ dotenv.config(); // Loads the environment variables from .env file
 
 const supabaseUrl = process.env.CONNECTION_URL
 const supabaseKey = process.env.CONNECTION_STRING
-export const supabase = createClient(supabaseUrl, supabaseKey, {
-  sessionStorage: window.sessionStorage,
-})
+export const supabase = createClient(supabaseUrl, supabaseKey)
 const app = express();
-const port = 3001;
+const port = process.env.PORT
 
 // Configure middleware, routes, and other server settings
 app.use(cors());
