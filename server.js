@@ -8,9 +8,8 @@ import { v4 as uuidv4 } from 'uuid';
 import { createClient } from "@supabase/supabase-js";
 import { useEffect, useState } from "react";
 
-const supabaseUrl = "https://jllovnpgqxedspgptytu.supabase.co";
-const supabaseKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpsbG92bnBncXhlZHNwZ3B0eXR1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODcxNzIwNDYsImV4cCI6MjAwMjc0ODA0Nn0.M4gkmvmyDn3EVTQftSRxCyItl8wUBKUY3_z4zwYzr3o";
+const supabaseUrl = process.env.CONNECTION_URL
+const supabaseKey = process.env.CONNECTION_STRING
 export const supabase = createClient(supabaseUrl, supabaseKey);
 const app = express();
 const port = 3001;
